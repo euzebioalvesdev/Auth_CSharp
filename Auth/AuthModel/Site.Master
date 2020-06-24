@@ -9,11 +9,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Meu aplicativo ASP.NET</title>
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.css" />
+    <%--<link href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1587270922/datepicker/datedropper.css" rel="stylesheet">--%>
     <script src="https://kit.fontawesome.com/c24bb48c11.js" crossorigin="anonymous"></script>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
+
+    <style type="text/css">
+        body, html {
+            background-image: url('https://i.imgur.com/xhiRfL6.jpg');
+            height: 100%;
+        }
+
+        #profile-img {
+            height: 180px;
+        }
+
+        .h-80 {
+            height: 80% !important;
+        }
+
+        .main {
+            width: 50%;
+            margin: 50px auto;
+        }
+
+        .form-group .form-control {
+            padding-left: 2.375rem;
+        }
+
+        .form-group .form-control-icon {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 2.375rem;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+        }
+
+        /*DatePicker*/
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            display: grid;
+            background: #F44336;
+            font-family: 'Manrope', sans-serif
+        }
+
+        .mt-100 {
+            margin-top: 100px
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 20px;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border-radius: 6px;
+            -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
+        }
+
+        .form-control[readonly] {
+            background-color: #f44336;
+            opacity: 1;
+            /*color: #fff;
+            border: 1px solid #f44336*/
+        }
+
+        .pro-button {
+            background-color: #f44336;
+            border-color: #f44336
+        }
+
+            .pro-button:focus {
+                outline: none !important;
+                background-color: #f44336;
+                border-color: #f44336;
+                box-shadow: 0 0 0 0.2rem rgb(255, 255, 255) !important
+            }
+
+            .pro-button:active {
+                outline: none !important;
+                background-color: #f44336 !important;
+                border-color: #f44336 !important
+            }
+
+            .pro-button:hover {
+                background-color: #d8271a;
+                border-color: #d8271a
+            }
+
+        label {
+            font-weight: 800
+        }
+        /*Final CSS DatePicker*/
+    </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
@@ -110,6 +215,17 @@
         </div>
 
     </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Inicialização do DatePicker
+            $('.datepicker').dateDropper({
+                lang: 'pt',
+                format: 'd/m/Y'
+            });
+        });
+    </script>
 
     <% if (Session["alert"] != null)
         { %>

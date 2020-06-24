@@ -1,41 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AuthModel.Login" %>
 
 <asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        body, html {
-            background-image: url('https://i.imgur.com/xhiRfL6.jpg');
-            height: 100%;
-        }
-
-        #profile-img {
-            height: 180px;
-        }
-
-        .h-80 {
-            height: 80% !important;
-        }
-
-        .main {
-            width: 50%;
-            margin: 50px auto;
-        }
-
-        .form-group .form-control {
-            padding-left: 2.375rem;
-        }
-
-        .form-group .form-control-icon {
-            position: absolute;
-            z-index: 2;
-            display: block;
-            width: 2.375rem;
-            height: 2.375rem;
-            line-height: 2.375rem;
-            text-align: center;
-            pointer-events: none;
-            color: #aaa;
-        }
-    </style>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
