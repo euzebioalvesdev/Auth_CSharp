@@ -13,5 +13,25 @@ namespace AuthModel
         {
 
         }
+
+        protected void btnEntrar_Click(object sender, EventArgs e)
+        {
+            string usuario, senha;
+            if (!string.IsNullOrEmpty(txtUsuario.Value))
+            {
+                if (!string.IsNullOrWhiteSpace(txtUsuario.Value))
+                {
+                    if (!string.IsNullOrEmpty(txtSenha.Value))
+                    {
+                        if (!string.IsNullOrWhiteSpace(txtSenha.Value))
+                        {
+                            usuario = txtUsuario.Value;
+                            senha = txtSenha.Value;
+                        }
+                    }
+                }
+            }
+
+        }
     }
 }
