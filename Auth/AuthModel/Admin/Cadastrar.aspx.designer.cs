@@ -11,7 +11,7 @@ namespace AuthModel.Admin
 {
 
 
-    public partial class Usuario
+    public partial class Cadastrar
     {
 
         /// <summary>

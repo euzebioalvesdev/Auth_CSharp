@@ -30,7 +30,7 @@
                             <div class="form-group">
                                 <label for="txtTelefone">Telefone</label>
                                 <span class="fas fa-phone form-control-icon"></span>
-                                <input type="tel" class="form-control" onkeypress="return mask(event, this, '(##) # ####-####')" maxlength="16" id="txtTelefone" placeholder="(##) # ####-####" runat="server">
+                                <input type="tel" class="form-control" onkeypress="return mask(event, this, '(##) # ####-####')" maxlength="16" id="txtTelefone" placeholder="(00) 0 0000-0000" runat="server">
                             </div>
                         </div>
                     </div>
@@ -50,14 +50,25 @@
                                 <input type="text" class="form-control" id="txtLogin" placeholder="Login" runat="server">
                             </div>
                         </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="TxtSenha">Senha</label>
+                                <span class="fas fa-key form-control-icon"></span>
+                                <input type="password" class="form-control" id="TxtSenha" placeholder="Senha" runat="server">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-2">
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-4">
                             <%--<button type="submit" class="btn btn-primary" id="btnEntrar" runat="server" style="width: 260px;">Entrar</button>--%>
-                            <asp:Button ID="btnEntrar" CssClass="btn btn-primary" runat="server" Text="Entrar" Width="260" />
+                            <asp:Button ID="btnEntrar" CssClass="btn btn-success" runat="server" Text="Salvar" Width="260" />
+                        </div>
+                        <div class="col-sm-4">
+                            <%--<button type="submit" class="btn btn-primary" id="btnEntrar" runat="server" style="width: 260px;">Entrar</button>--%>
+                            <asp:Button ID="btnLimpar" CssClass="btn btn-danger" runat="server" Text="Limpar" Width="260" />
                         </div>
                         <div class="col-sm-2">
                         </div>
